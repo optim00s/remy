@@ -1,0 +1,48 @@
+@use "./variables" as v;
+
+@mixin flex($flex-direction: row, $align-items: normal, $justify-content: normal) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin flex-row($align-items: flex-start, $justify-content: space-between) {
+    display: flex;
+    flex-direction: row;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin flex-column($align-items: flex-start, $justify-content: space-between) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin flex-center($flex-direction: row, $justify-content: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: $justify-content;
+}
+
+@mixin base {
+    width: 50%;
+    min-height: calc(100vh - 80px);
+    background-color: v.$accent-color;
+    border-radius: v.$radius-base;
+    padding: 10px;
+}
+
+@mixin option-base {
+    border: solid 2px v.$border-color;
+    border-radius: v.$radius-sm;
+    padding: 16px 8px;
+    width: 100%;
+    font-size: v.$font-sm;
+    outline: none;
+    background-color: v.$option-color;
+    color: v.$primary-text-color;
+}

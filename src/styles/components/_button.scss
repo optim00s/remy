@@ -1,0 +1,20 @@
+@use "../abstracts/variables.scss" as v;
+
+.button {
+  border: solid 2px v.$button-border;
+  border-radius: v.$radius-sm;
+  padding: 16px 8px;
+  width: 100%;
+  font-size: 14.8px;
+  outline: none;
+  background-color: v.$button;
+  color: v.$secondary-text-color;
+  cursor: pointer;
+  letter-spacing: 0.05rem;
+  transition: all;
+  transition-duration: 0.2s;
+
+  &:hover {
+    background-color: v.$button-hover;
+  }
+}

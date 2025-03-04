@@ -1,0 +1,95 @@
+@use "../styles/abstracts/variables" as v;
+@use "../styles/abstracts/mixins" as m;
+@use "../styles/components/button";
+
+.page {
+  font-family: var(--font-geist-sans);
+  padding: 1rem;
+  min-height: 100vh;
+
+  &__title {
+    font-size: v.$font-xl;
+    margin-bottom: 10px;
+    color: v.$secondary-text-color;
+  }
+}
+
+.main {
+  @include m.flex-row;
+  gap: v.$gap-base;
+
+  @media (max-width: v.$breakpoint-mobile) {
+    @include m.flex-column;
+  }
+}
+
+.form_section {
+  @include m.base;
+  display: flex;
+  flex-direction: column;
+  gap: v.$gap-base;
+
+  @media (max-width: v.$breakpoint-mobile) {
+    width: 100%;
+  }
+
+  .title {
+    font-size: v.$font-md;
+    letter-spacing: 0.01rem;
+    margin-bottom: 16px;
+
+    > span {
+      font-size: 15px;
+    }
+  }
+}
+
+.recipe_section {
+  @include m.base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @media (max-width: v.$breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+.option_section {
+  @include m.flex(column);
+  gap: v.$gap-md;
+}
+
+.ingredient_choose {
+  @include m.flex(column);
+  gap: v.$gap-small;
+
+  .ingredient_input {
+    @include m.option-base;
+  }
+}
+
+.dietary_prefrence {
+  @include m.flex(column);
+  gap: v.$gap-small;
+
+  .dietary_select {
+    @include m.option-base;
+    cursor: pointer;
+  }
+}
+
+.gen_button {
+  @extend .button;
+  margin-top: 28px;
+}
+
+.placeholder {
+  @include m.flex-center;
+  gap: v.$gap-base;
+}
+
+.logo {
+  @include m.flex-center($justify-content: normal);
+  gap: v.$gap-xs;
+}
