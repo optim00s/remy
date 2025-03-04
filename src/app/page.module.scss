@@ -93,3 +93,7 @@
   @include m.flex-center($justify-content: normal);
   gap: v.$gap-xs;
 }
+
+.error {
+  color: #ff2525;
+}
