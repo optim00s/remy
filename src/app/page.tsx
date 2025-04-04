@@ -1,6 +1,4 @@
 "use client";
-
-import { div, style } from "framer-motion/client";
 import styles from "./page.module.scss";
 import { ChefHat, CookingPot } from "lucide-react";
 import { useState } from "react";
