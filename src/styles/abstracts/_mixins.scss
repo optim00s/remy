@@ -33,6 +33,7 @@
     min-height: calc(100vh - 80px);
     background-color: v.$accent-color;
     border-radius: v.$radius-base;
+    border: solid 1.4px v.$border-color;
     padding: 10px;
 }
 

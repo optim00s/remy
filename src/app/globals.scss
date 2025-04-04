@@ -1,14 +1,4 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #e6c964;
-    --foreground: #0a0a0a;
-  }
-}
+@use "../styles/abstracts/variables" as v;
 
 html,
 body {
@@ -17,8 +7,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: v.$background-color;
+  color: v.$primary-text-color;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -3,14 +3,58 @@
 @use "../styles/components/button";
 
 .page {
+  min-height: 100vh;
   font-family: var(--font-geist-sans);
   padding: 1rem;
-  min-height: 100vh;
+  margin-top: 50px;
+}
 
-  &__title {
-    font-size: v.$font-xl;
-    margin-bottom: 10px;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px;
+  margin: 0 auto;
+  
+  &__left_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    gap: 5px;
+    
+    .icon {
+      color: v.$button;
+      margin-bottom: 2px;
+    }
+    
+    .text {
+      font-size: v.$font-md;
+    }
+  }
+
+  &__right_section {
+    text-align: center;
     color: v.$secondary-text-color;
+    font-size: 0.9rem;  
+    a {
+      color: v.$button;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -31,6 +75,8 @@
 
   @media (max-width: v.$breakpoint-mobile) {
     width: 100%;
+    min-height: fit-content;
+    padding: 15px;
   }
 
   .title {
@@ -40,6 +86,7 @@
 
     > span {
       font-size: 15px;
+      color: v.$secondary-text-color;
     }
   }
 }
@@ -52,6 +99,7 @@
   
   @media (max-width: v.$breakpoint-mobile) {
     width: 100%;
+    min-height: auto;
   }
 }
 
@@ -69,7 +117,7 @@
   }
 }
 
-.dietary_prefrence {
+.dietary_preference {
   @include m.flex(column);
   gap: v.$gap-small;
 
@@ -85,15 +133,31 @@
 }
 
 .placeholder {
-  @include m.flex-center;
+  @include m.flex-center($flex-direction:column);
   gap: v.$gap-base;
-}
+  color: adjust(v.$primary-text-color, 30%);
+  text-align: center;
+  height: 100%;
+  
+  &__icon {
+    width: 60px;
+    height: 60px;
+    color: v.$icon-color;
+  }
+  
+  @media (max-width: v.$breakpoint-mobile) {
+    @include m.flex-center;
 
-.logo {
-  @include m.flex-center($justify-content: normal);
-  gap: v.$gap-xs;
+    &__icon {
+      width: 30px;
+      height: 25px;
+    }
+  }
 }
 
 .error {
   color: #ff2525;
+  padding: v.$gap-base;
+  background-color: rgba(255, 37, 37, 0.1);
+  border-radius: v.$radius-base;
 }
