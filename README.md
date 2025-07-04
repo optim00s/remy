@@ -1,5 +1,5 @@
 # Remy 
-Remy is a web application that allows users to generate recipes based on their chosen ingredients and dietary preferences. Powered by OpenRouter (using the `google/gemini-2.5-pro-exp-03-25:free` model)
+Remy is a web application that allows users to generate recipes based on their chosen ingredients and dietary preferences. Powered by OpenRouter (using the `qwen/qwen3-8b-04-28:free` model)
 
 ## Gallery
 ![alt text](public/readme/image.png)
@@ -15,7 +15,7 @@ Remy is a web application that allows users to generate recipes based on their c
 - [TypeScript](https://www.typescriptlang.org/)
 - [Sass](https://sass-lang.com/)
 - [Lucide React](https://lucide.dev/) - for icons
-- [OpenRouter](https://openrouter.ai/) - for AI model API (using `google/gemini-2.5-pro-exp-03-25:free`)
+- [OpenRouter](https://openrouter.ai/) - for AI model API (using `qwen/qwen3-8b-04-28:free`)
 
 ## Getting Started
 
