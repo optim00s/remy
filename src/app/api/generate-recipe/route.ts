@@ -39,7 +39,7 @@ export async function POST(request: Request) {
           "X-Title": "Remy Recipe Generator"
         },
         body: JSON.stringify({
-          model: "google/gemini-2.5-pro-exp-03-25:free",
+          model: "qwen/qwen3-8b-04-28:free",
           messages: [
             {
               role: "user",
